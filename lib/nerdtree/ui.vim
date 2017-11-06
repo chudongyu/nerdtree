@@ -355,7 +355,6 @@ function! s:UI.saveScreenState()
     let self._screenState = {}
     let self._screenState['oldPos'] = getpos(".")
     let self._screenState['oldTopLine'] = line("w0")
-    let size = exists("b:NERDTreeOldWindowSize") ? b:NERDTreeOldWindowSize : g:NERDTreeWinSize
     let s:keepsize = exists("g:NERDTreeKeepWinSize") ? g:NERDTreeKeepWinSize : 1
     if s:keepsize
         let self._screenState['oldWindowSize']= winwidth("")
